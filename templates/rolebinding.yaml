@@ -1,0 +1,14 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: readonly-secrets-rolebinding
+  namespace: {{ .Values.namespace }}
+subjects:
+- kind: ServiceAccount
+  name: readonly-secrets-sa
+  namespace: {{ .Values.namespace }}
+roleRef:
+  kind: Role
+  name: readonly-secrets-role
+  apiGroup: rbac.authorization.k8s.io
+

@@ -1,0 +1,8 @@
+namespace: external-certs
+issuer: "letsencrypt-prod"
+
+#certificates:
+#  certificate:
+#    name: ""
+#    fqdn: ""
+#
